@@ -167,7 +167,17 @@ Dando ênfase em alguma palavra ou trecho do texto.
   
 Use the `printf()` function.
 
-----   
+-------------------------------------------------------------------------------------  
+------------------------------------------------------------------------------------- 
+# IMAGENS
+
+![Alt text](bloco-de-anotacoes/aulas/aula_001/desafio1_aula001.PNG)
+
+![Alt text](bloco-de-anotacoes/aulas/aula_001/desafio1_aula001.PNG "Imagem do desafio 1")
+
+
+-------------------------------------------------------------------------------------  
+-------------------------------------------------------------------------------------    
 # LINKS
 
 I get 10 times more traffic from [Google] [1] than from [Yahoo] [2] or [MSN] [3].  
@@ -255,23 +265,6 @@ Dando ênfase em alguma palavra ou trecho do texto.
   
 Use the `printf()` function.
 
-----   
-I get 10 times more traffic from [Google] [1] than from [Yahoo] [2] or [MSN] [3].
-
-  [1]: http://google.com/        "Google"
-  [2]: http://search.yahoo.com/  "Yahoo Search"
-  [3]: http://search.msn.com/    "MSN Search"
-
-  ---
-
-
-I get 10 times more traffic from [Google][] than from
-[Yahoo][] or [MSN][].
-
-  [google]: http://google.com/        "Google"
-  [yahoo]:  http://search.yahoo.com/  "Yahoo Search"
-  [msn]:    http://search.msn.com/    "MSN Search"
-
   ---  
 
 <br />  
@@ -290,17 +283,6 @@ Quebra de Linhas
 <br />  
 <br />
 
-# Título com H1   (Atx-style)
-
-## Título com H2   (Atx-style)
-
-### Título com H3   (Atx-style)
-
-#### Título com H4   (Atx-style)
-
-##### Título com H5   (Atx-style)
-
-###### Título com H6   (Atx-style)   
 .  
 .  
 .  
