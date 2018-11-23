@@ -171,9 +171,9 @@ Use the `printf()` function.
 ------------------------------------------------------------------------------------- 
 # IMAGENS
 
-![Alt text](bloco-de-anotacoes/aulas/aula_001/desafio1_aula001.PNG)
+![Alt text](desafio1_aula001.PNG)
 
-![Alt text](bloco-de-anotacoes/aulas/aula_001/desafio1_aula001.PNG "Imagem do desafio 1")
+![Alt text](desafio1_aula001.PNG "Imagem do desafio 1")
 
 
 -------------------------------------------------------------------------------------  
