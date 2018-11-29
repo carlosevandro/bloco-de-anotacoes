@@ -103,5 +103,8 @@ Com o comando `git commit --amend`, o usuário pode corrigir o erro do **commit*
 > 
 
 Pronto, a mensagem do último commit foi alterada e pode ser visualizada antes do **push** com o comando `git log`.
-.
-.
+
+> `git log` 
+> 
+> - Entra em um modo de visulaização do log de atividades do git. Aperte a tecla `q` para sair deste modo de log.  
+> 
