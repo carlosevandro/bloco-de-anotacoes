@@ -287,4 +287,122 @@ Quebra de Linhas
 .  
 .  
 
-# BLOCKQUOTES
+
+---
+
+Marknown não substitui HTML. È utilizado por facilitar a digitação e convertido para o HTML. Para qualquer marcação que não é coberta pela sintaxe do Marknown, o usuário pode simplesmente utilizar HTML, porém existem algumas restrições. Elementos HTML de nível de bloco, como ```<div>, <table>, <pre>, <p>```, dentre outros, devem estar separados do conteúdo anterior e posterior do bloco por linhas em branco, e as tags de início e fim do bloco não devem ser indentadas com tabulações ou espaços.
+
+    Exemplo:
+
+	Texto antes do bloco, separado por um espaço em branco.
+
+	<table>
+		<tr>
+			<td>Foo</td>
+		</tr>
+	</table>
+
+	Texto depois do bloco, separado por um espaço em branco.
+	Antes da tag tag <table> e </table> não existem espaços ou tabulações.
+
+A sintaxe de formatação do Marknown **não é** processada dentro de tags HTML de nível de bloco.
+	
+*Span level HTML tags* (`<span>, <cite>, or <del>`) podem ser utilizadas em qualquer lugar. A sintaxe do Marknown é processada dentro de *span-level tags*.
+
+In HTML, there are two characters that demand special treatment: 
+
+< and &. 
+
+Left angle brackets are used to start tags; 
+ampersands are used to denote HTML entities. 
+If you want to use them as literal characters, you must escape them as entities, e.g. &lt;, and &amp;.
+
+Markdown allows you to use these characters naturally, taking care of all the necessary escaping for you. 
+If you use an ampersand as part of an HTML entity, it remains unchanged; otherwise it will be translated into &amp;.
+
+So, if you want to include a copyright symbol in your article, you can write:
+
+&copy;
+
+and Markdown will leave it alone. But if you write:
+
+AT&T
+
+Markdown will translate it to:
+
+AT&amp;T
+
+Similarly, if you use angle brackets as delimiters for HTML tags, Markdown will treat them as such. But if you write:
+
+4 < 5
+
+Markdown will translate it to:
+
+4 &lt; 5
+
+However, inside Markdown code spans and blocks, angle brackets and ampersands are always encoded automatically. This makes it easy to use Markdown to write about HTML code.
+
+---
+---
+
+Marknown não substitui HTML. È utilizado por facilitar a digitação e convertido para o HTML. Para qualquer marcação que não é coberta pela sintaxe do Marknown, o usuário pode simplesmente utilizar HTML, porém existem algumas restrições. Elementos HTML de nível de bloco, como <div>, <table>, <pre>, <p>, dentre outros, devem estar separados do conteúdo anterior e posterior do bloco por linhas em branco, e as tags de início e fim do bloco não devem ser indentadas com tabulações ou espaços.
+
+Exemplo:
+
+	Texto antes do bloco, separado por um espaço em branco.
+
+	<table>
+		<tr>
+			<td>Foo</td>
+		</tr>
+	</table>
+
+	Texto depois do bloco, separado por um espaço em branco.
+	Antes da tag tag <table> e </table> não existem espaços ou tabulações.
+
+A sintaxe de formatação do Marknown **não é** processada dentro de tags HTML de nível de bloco.
+	
+*Span level HTML tags* (<span>, <cite>, or <del>) podem ser utilizadas em qualquer lugar. A sintaxe do Marknown é processada dentro de *span-level tags*.
+
+In HTML, there are two characters that demand special treatment: 
+
+< and &. 
+
+Left angle brackets are used to start tags; 
+ampersands are used to denote HTML entities. 
+If you want to use them as literal characters, you must escape them as entities, e.g. &lt;, and &amp;.
+
+Markdown allows you to use these characters naturally, taking care of all the necessary escaping for you. 
+If you use an ampersand as part of an HTML entity, it remains unchanged; otherwise it will be translated into &amp;.
+
+So, if you want to include a copyright symbol in your article, you can write:
+
+&copy;
+
+and Markdown will leave it alone. But if you write:
+
+AT&T
+
+Markdown will translate it to:
+
+AT&amp;T
+
+Similarly, if you use angle brackets as delimiters for HTML tags, Markdown will treat them as such. But if you write:
+
+4 < 5
+
+Markdown will translate it to:
+
+4 &lt; 5
+
+However, inside Markdown code spans and blocks, angle brackets and ampersands are always encoded automatically. This makes it easy to use Markdown to write about HTML code.
+
+---
+
+
+---
+
+
+
+---
+
