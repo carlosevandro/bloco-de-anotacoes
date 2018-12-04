@@ -2,12 +2,8 @@
 
 ### O texto fica formatado similiar aos emails em texto puro de antigamente. Fica mais legível que o HTML, pois não tem TAGS para atrapalhar a leitura do código formatado, e os códigos utilizados no MarkDown parecem com a formatação de textos de email em ASCII, bastante populares antigamente, antes dos emails com texto em HTML se popularizarem.
 
-### Marknown não substitui HTML. È utilizado por facilitar a digitação e convertido para o HTML. Para qualquer marcação que não é coberta pela sintaxe do Marknown, o usuário pode simplesmente utilizar HTML, porém existem algumas restrições. 
-
-
-
-
-Elementos HTML de nível de bloco, como ```<div>, <table>, <pre>, <p>```, dentre outros, devem estar separados do conteúdo anterior e posterior do bloco por linhas em branco, e as tags de início e fim do bloco não devem ser indentadas com tabulações ou espaços.
+ Marknown não substitui HTML. È utilizado por facilitar a digitação e convertido para o HTML. Para qualquer marcação que não é coberta pela sintaxe do Marknown, o usuário pode simplesmente utilizar HTML, porém existem algumas restrições. Elementos HTML de nível de bloco, como ```<div>, <table>, <pre>, <p>```, dentre outros, devem estar separados do conteúdo anterior e posterior do bloco por linhas em branco, e as tags de início e fim do bloco não devem ser indentadas com tabulações ou espaços.
+ 
 
     Exemplo:
 
@@ -22,42 +18,26 @@ Elementos HTML de nível de bloco, como ```<div>, <table>, <pre>, <p>```, dentre
 	Texto depois do bloco, separado por um espaço em branco.
 	Antes da tag tag <table> e </table> não existem espaços ou tabulações.
 
-A sintaxe de formatação do Marknown **não é** processada dentro de tags HTML de nível de bloco.
+
+- A sintaxe de formatação do Marknown **não é** processada dentro de tags HTML de nível de bloco.
 	
-*Span level HTML tags* (`<span>, <cite>, or <del>`) podem ser utilizadas em qualquer lugar. A sintaxe do Marknown é processada dentro de *span-level tags*.
+- *Span level HTML tags* (`<span>, <cite>, or <del>`) podem ser utilizadas em qualquer lugar. A sintaxe do Marknown é processada dentro de *span-level tags*.
 
-In HTML, there are two characters that demand special treatment: 
+Em HTML, existem dois caracteres que demandam tratamento especial: 
 
-< and &. 
+- < `Left angle brackets` são utilizados para iniciar tags;
+- & `ampersands` são utilizados para denotar entidades HTML.  
 
-Left angle brackets are used to start tags; 
-ampersands are used to denote HTML entities. 
+Se você quiser usar estes caractéres com 
+Se você quiser usá-los como caracteres literais, você deve escapar deles como entidades,
 If you want to use them as literal characters, you must escape them as entities, e.g. &lt;, and &amp;.
 
 Markdown allows you to use these characters naturally, taking care of all the necessary escaping for you. 
-If you use an ampersand as part of an HTML entity, it remains unchanged; otherwise it will be translated into &amp;.
+If you use an ampersand as part of an HTML entity, it remains unchanged; otherwise it will be translated into `&amp;`. If you write `AT&T`, Markdown will translate it to `AT&amp;T`. 
 
-So, if you want to include a copyright symbol in your article, you can write:
+Similarly, if you use angle brackets as delimiters for HTML tags, Markdown will treat them as such. But if you write `4 < 5`, Markdown will translate it to `4 &lt; 5`.
 
-&copy;
-
-and Markdown will leave it alone. But if you write:
-
-AT&T
-
-Markdown will translate it to:
-
-AT&amp;T
-
-Similarly, if you use angle brackets as delimiters for HTML tags, Markdown will treat them as such. But if you write:
-
-4 < 5
-
-Markdown will translate it to:
-
-4 &lt; 5
-
-However, inside Markdown code spans and blocks, angle brackets and ampersands are always encoded automatically. This makes it easy to use Markdown to write about HTML code.
+Inside Markdown code spans and blocks, angle brackets and ampersands are always encoded automatically. This makes it easy to use Markdown to write about HTML code.
 
 -------------------------------------------------------------------------------------  
 ------------------------------------------------------------------------------------- 
@@ -640,6 +620,37 @@ Informe os parâmetros `username` e `password` para a função `login()`.
 > login(username, password);
 > ```
 </br></br>
+
+# ESCAPES COM A BARRA INVERTIDA #
+
+Markdown permite o uso de escapes de barra invertida para gerar caracteres literais que teriam um significado  especial na sintaxe de formatação do Markdown.
+
+Exemplo:
+
+```text
+**Texto com negrito**  
+\*\*Texto com asteriscos\*\*
+```
+
+> **Texto com negrito**  
+> \*\*Texto com asteriscos\*\*
+
+O Markdown fornece escapes de barra invertida para os seguintes caracteres:  
+
+```text
+\   barra invertida (backslash)
+`   crase (backtick)
+*   asterisco
+_   underscore
+{}  chaves (curly braces)
+[]  colchetes (square brackets)
+()  parêntesis
+#   hashtag (hash mark)
++   sinal de mais
+-   sinal de menos (hífen)
+.   ponto
+!   sinal de exclamação
+```
 
 -------------------------------------------------------------------------------------  
 -------------------------------------------------------------------------------------  
